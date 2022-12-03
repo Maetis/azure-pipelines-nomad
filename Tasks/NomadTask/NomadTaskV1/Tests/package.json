@@ -1,0 +1,12 @@
+{
+  "name": "nomadtask",
+  "version": "1.0.0",
+  "description": "nomad task installer test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "nock": "13.2.4"
+  }
+}

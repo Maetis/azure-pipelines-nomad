@@ -1,0 +1,16 @@
+{
+  "loc.friendlyName": "Nomad tool installer",
+  "loc.helpMarkDown": "",
+  "loc.description": "Find in cache or download a specific version of Nomad and prepend it to the PATH",
+  "loc.instanceNameFormat": "Install Nomad $(NomadVersion)",
+  "loc.input.label.nomadVersion": "Version",
+  "loc.input.help.nomadVersion": "The version of Nomad which should be installed on the agent if not already present",
+  "loc.messages.VerifyNomadInstallation": "Verifying Nomad installation...",
+  "loc.messages.InputVersionNotValidSemanticVersion": "Input version %s is not a valid semantic version",
+  "loc.messages.NomadNotFoundInFolder": "Nomad executable not found in path %s",
+  "loc.messages.OperatingSystemNotSupported": "Operating system %s is not supported",
+  "loc.messages.ArchitectureNotSupported": "Architecture %s is not supported",
+  "loc.messages.NomadDownloadFailed": "Failed to download Nomad from url %s. Error %s",
+  "loc.messages.NomadVersionNotFound": "Unable to get latest version: using 1.1.6",
+  "loc.messages.GettingLatestNomadVersion": "Getting latest Nomad version."
+}

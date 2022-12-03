@@ -1,0 +1,51 @@
+{
+  "id": "a4789e5d-f6e8-431f-add9-379d640a883c",
+  "name": "NomadInstaller",
+  "friendlyName": "ms-resource:loc.friendlyName",
+  "description": "ms-resource:loc.description",
+  "author": "Kevin L.",
+  "helpMarkDown": "ms-resource:loc.helpMarkDown",
+  "category": "Tool",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "0"
+  },
+  "instanceNameFormat": "ms-resource:loc.instanceNameFormat",
+  "inputs": [
+    {
+      "name": "NomadVersion",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.NomadVersion",
+      "defaultValue": "latest",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.NomadVersion"
+    }
+  ],
+  "execution": {
+    "Node10": {
+      "target": "src/index.js"
+    }
+  },
+  "outputVariables": [
+    {
+      "name": "NomadLocation",
+      "description": "The location of the Nomad binary that was installed on the agent."
+    }
+  ],
+  "messages": {
+    "VerifyNomadInstallation": "ms-resource:loc.messages.VerifyNomadInstallation",
+    "InputVersionNotValidSemanticVersion": "ms-resource:loc.messages.InputVersionNotValidSemanticVersion",
+    "NomadNotFoundInFolder": "ms-resource:loc.messages.NomadNotFoundInFolder",
+    "OperatingSystemNotSupported": "ms-resource:loc.messages.OperatingSystemNotSupported",
+    "ArchitectureNotSupported": "ms-resource:loc.messages.ArchitectureNotSupported",
+    "NomadDownloadFailed": "ms-resource:loc.messages.NomadDownloadFailed",
+    "NomadVersionNotFound": "ms-resource:loc.messages.NomadVersionNotFound",
+    "GettingLatestNomadVersion": "ms-resource:loc.messages.GettingLatestNomadVersion"
+  }
+}
