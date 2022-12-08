@@ -5,7 +5,7 @@ import tasks = require('azure-pipelines-task-lib/task');
 import path = require('path');
 import * as uuidV4 from 'uuid/v4';
 const fs = require('fs');
-const del = require('del');
+//const del = require('del');
 
 export abstract class BaseNomadCommandHandler {
     providerName: string;

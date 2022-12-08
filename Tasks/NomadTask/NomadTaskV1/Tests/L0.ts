@@ -211,7 +211,7 @@ describe('Nomad Test Suite', () => {
     //     }
     // });
 
-    it('plan should fail with empty working directory', (done: MochaDone) => {
+    it('plan should fail with empty working directory', (done: Mocha.Done) => {
         let tp = path.join(__dirname, './PlanTests/PlanFailEmptyWorkingDirectory.js');
         let tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
         try {
