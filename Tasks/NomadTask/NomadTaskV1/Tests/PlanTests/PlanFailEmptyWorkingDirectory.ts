@@ -8,7 +8,7 @@ let tr: tmrm.TaskMockRunner = new tmrm.TaskMockRunner(tp);
 tr.setInput('provider', 'aws');
 tr.setInput('command', 'plan');
 tr.setInput('workingDirectory', 'DummyWorkingDirectory');
-tr.setInput('environmentServiceName', 'AWS');
+tr.setInput('environmentServiceNameAWS', 'AWS');
 tr.setInput('commandOptions', '-no-color');
 
 process.env['ENDPOINT_AUTH_SCHEME_AWS'] = 'Basic';
@@ -24,10 +24,6 @@ let a: ma.TaskLibAnswers = <ma.TaskLibAnswers> {
         "nomad": true
     },
     "exec": {
-        "nomad providers": {
-            "code": 0,
-            "stdout": "provider aws"
-        },
         "nomad plan -no-color": {
             "code": 1,
             "stdout": "Error: No configuration files"

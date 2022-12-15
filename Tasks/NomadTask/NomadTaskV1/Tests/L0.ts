@@ -216,9 +216,10 @@ describe('Nomad Test Suite', () => {
         let tr: ttm.MockTestRunner = new ttm.MockTestRunner(tp);
         try {
             tr.run();
-
+            console.log(tr.stdout);
+            
             assert(tr.failed, 'task should have failed');
-            assert(tr.invokedToolCount === 2, 'tool should have been invoked two times. actual: ' + tr.invokedToolCount);
+            assert(tr.invokedToolCount === 1, 'tool should have been invoked two times. actual: ' + tr.invokedToolCount);
             assert(tr.errorIssues.length === 1, 'should have one error');
             assert(tr.warningIssues.length === 0, 'should have no warnings');
             assert(tr.stdOutContained('Error: No configuration files'), 'Should have shown error message');

@@ -154,20 +154,21 @@ export abstract class BaseNomadCommandHandler {
     }
     
     public async plan(): Promise<number> {
-        this.warnIfMultipleProviders();
+        //this.warnIfMultipleProviders();
         let serviceName = `environmentServiceName${this.getServiceProviderNameFromProviderInput()}`;
-        let commandOptions = tasks.getInput("commandOptions") != null ? `${tasks.getInput("commandOptions")} -detailed-exitcode`:`-detailed-exitcode`
+        let commandOptions = tasks.getInput("commandOptions"); // != null ? `${tasks.getInput("commandOptions")} -detailed-exitcode`:`-detailed-exitcode`
+        
         let planCommand = new NomadAuthorizationCommandInitializer(
             "plan",
             tasks.getInput("workingDirectory"),
             tasks.getInput(serviceName, true),
             commandOptions
         );
-        
+
         let nomadTool;
         nomadTool = this.nomadToolHandler.createToolRunner(planCommand);
         this.handleProvider(planCommand);
-    
+
         let result = await nomadTool.exec(<IExecOptions> {
             cwd: planCommand.workingDirectory,
             ignoreReturnCode: true
